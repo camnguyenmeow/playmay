@@ -67,7 +67,7 @@
 	#clss {
 		width: 80%;
 		cursor: pointer;
-		
+
 	}
 	#openn {
 		width: 80%;
@@ -152,7 +152,7 @@
 		<img src="img/angry.gif" id="angryimg">
 		<div id="divdream">
 			<h1 id="dreamtxt"> </h1><img src="img/dream.gif" style="width: 100%;">
-			
+
 		</div>
 		<img src="img/zzz.gif" id="zzzimg">
 		<h4 id="username"> </h4>
@@ -208,7 +208,7 @@
 			setInterval(take1, 900);
 			ready = true;
 		}
-		
+
 		function closeeye() {
 			if (gameover) return;
 			openimg.style.display = 'none';
@@ -233,7 +233,7 @@
 				board();
 				return;
 			}
-			
+
 			score++;
 			schtml.innerHTML = "Score: "+score;
 		}
@@ -270,10 +270,10 @@
 					body: JSON.stringify({"data": {"User":usertxt,"Score":score}}),
 				}).then(res =>{
 					if (res.status === 201){
-						
+
 					}
 					else{
-						
+
 					}
 				})
 			} else {
@@ -325,6 +325,7 @@
 			gameover = false;
 			ready = false;
 			open=false;
+			olduser=true;
 			playgame();
 			document.getElementById("share").style.display='none';
 			document.getElementById("angryimg").style.display = 'none';
