@@ -1,6 +1,6 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 	@import url("https://fonts.googleapis.com/css?family=Kanit:900");
 	body {
@@ -146,10 +146,18 @@
 				maindiv.style.display = 'block';
 			}
 		}
+		function playMusic() {
+         const musicFile = 'music/background.mp3'
+         const audio = new Audio(musicFile)
+         audio.volume = 0.35
+         audio.loop = true
+         audio.play()
+         }
+         document.addEventListener('click', playMusic, {once: true})
 	</script>
 </body>
 <footer>
-	<a class="linkk" href = "https://github.com/camnguyenmeow">
+	<a class="linkk" href = "https://github.com/camnguyenmeow"> 
 		<img src="img/github.svg" class = "icon">
 	</a>
 	<a class="linkk" href = "https://www.facebook.com/camnguyenmeow">

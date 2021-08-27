@@ -1,6 +1,6 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 	@import url("https://fonts.googleapis.com/css?family=Kanit:900");
 	body {
@@ -106,7 +106,6 @@
 		height: 90%;
 		width: 99%;
 		text-align: left;
-		margin-left: 5vw;
 	}
 	#clsboard {
 		width:  5vw;
@@ -150,7 +149,7 @@
 			<img src="img/punch.png" style="width: 30%;margin-right: 20%;">
 		</div>
 		<img id="kicksb" src="img/kick.png" style="width: 28%; margin-left: 50px;display: none;position: absolute;">
-		<img src="img/angry.gif" id="angryimg" style="pointer-events: none;">
+		<img src="img/angry.gif" id="angryimg">
 		<div id="divdream">
 			<h1 id="dreamtxt"> </h1><img src="img/dream.gif" style="width: 100%;">
 
@@ -167,6 +166,18 @@
 	</div>
 	<script>
 		var score = 0, usertxt, olduser = false, gameover = false, ready = false, dataa;
+		var snore = new Audio("music/snoring.mp3");
+		snore.volume = 0.35;
+        snore.loop = true;
+        var punchsound = new Audio("music/punch.mp3");
+		punchsound.volume = 0.35;
+		var angrysound = new Audio("music/angry.mp3");
+		punchsound.volume = 0.35;
+		var pain = new Audio("music/pain.mp3");
+		punchsound.volume = 0.35;
+		var meow = new Audio("music/meow.mp3");
+		punchsound.volume = 0.35;
+
 		var txt = document.getElementById("nametxt"), mydata;
 		function subname() {
 			fetch("https://api.apispreadsheets.com/data/17277").then(res=>{
@@ -206,6 +217,7 @@
 			document.getElementById("username").innerHTML = usertxt;
 			document.getElementById("scoree").innerHTML = "Score: "+score;
 			clsimg.style.display = 'block';
+			snore.play();
 			setInterval(take1, 900);
 			ready = true;
 		}
@@ -216,11 +228,13 @@
 			clsimg.style.display = 'block';
 			zzz.style.display = 'block';
 			open = false;
+			snore.play();
 		}
 		function kickk() {
 			document.getElementById("kicksb").style.display = 'none';
 		}
 		function kickmay(abc) {
+			punchsound.play();
 			if (gameover) return;
 			document.getElementById("kicksb").style.display = 'block';
 			setTimeout(kickk, 500);
@@ -229,11 +243,14 @@
 				document.getElementById("angryimg").style.display = 'block';
 				alert("Grrrr!!! Mây đã phát hiện ra. Tới công chiện zới nó rùi");
 				gameover=true;
+				snore.pause();
+				angrysound.play();
 				clearInterval(take1);
 				document.getElementById("share").style.display='block';
 				board();
 				return;
 			}
+			pain.play();
 
 			score++;
 			schtml.innerHTML = "Score: "+score;
@@ -252,7 +269,9 @@
 		function take1(){
 			if (open === false) {
 				var t = Math.round(Math.random()*21062004);
-				if (t % 6 === 0 || t % 216 === 0 || t % 2004 === 0 || t < 20) {
+				if (t % 4 === 0 || t % 216 === 0 || t % 2004 === 0 || t < 20 || t % 6 === 0) {
+					snore.pause();
+					meow.play();
 					clsimg.style.display = 'none';
 					openimg.style.display = 'block';
 					document.getElementById("divdream").style.display='none';
@@ -335,6 +354,14 @@
 				classb[0].parentNode.removeChild(classb[0]);
 			}
 		}
+		function playMusic() {
+         const musicFile = 'music/background2.mp3'
+         const audio = new Audio(musicFile)
+         audio.volume = 0.35
+         audio.loop = true
+         audio.play()
+         }
+         document.addEventListener('click', playMusic, {once: true})
 	</script>
 </body>
 </html>
