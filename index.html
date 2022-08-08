@@ -158,87 +158,84 @@
 		<div id="about" style="display: none;">
 			<div style="width: 50%; float: right;text-align: left;">
 				<h5 style = "font-weight: bolder;"> SƠ YẾU LÝ LỊCH</h5><br>
-			<ul class = "abtMay">💛 Tên: Mây </ul>
-		<ul class = "abtMay">💛 Nickname: Mây 2 lằn </ul>
-	<ul class = "abtMay">💛 Giới tính: Nam </ul>
-<ul class = "abtMay">💛 Sở thích: Cắn người </ul>
-<ul class = "abtMay">💛 Sợ: Mọi thứ, trừ con người </ul>
-<hr>
-
-<ul  class = "abtMay" style = "font-weight: bold;"> "Vì nó cắn mình nhưng mình không được đánh nó, nên mình đã code web này để mng đánh nó giúp mình" </ul><br>
-<button id="clsabout" onclick="abtme(0)"> ĐÓNG </button>
-</div>
-<img src="img/may2.png" style="height: auto; width: 30%; ">
-</div>
-<div id="htp" style="display: none;">
-<h5> CÁCH CHƠI </h5>
-<ul  class = "abtMay"> Mây đang ngủ, những ai đã từng bị nó cắn hãy nhân cơ hội này đánh nó thật nhanh. <br> Nếu đánh vào lúc nó tỉnh dậy, nó sẽ cắn bạn đấy</ul><br>
-<button id="clsabout" onclick="htp(0)"> ĐÓNG </button>
-</div>
-<div id="maindiv">
-<div class="wavy">
-<h1>
-<span style="--i:1">P</span>
-<span style="--i:2">L</span>
-<span style="--i:3">A</span>
-<span style="--i:4">Y</span>
-<span style="--i:5">&nbsp;</span>
-<span style="--i:6">M</span>
-<span style="--i:7">Â</span>
-<span style="--i:8">Y</span>
-</h1>
-</div>
-<h4> "Đừng Play Together, hãy Play Mây" </h4><br>
-<button class="btnhome" onclick="abtme(1)"> Mây là ai ? </button>
-<button onclick="htp(1)" class="btnhome"> Cách chơi </button>
-<button class="btnhome" onclick=" location.href='play.html'"> Bắt <br> đầu </button>
-
-</div>
-<script type="text/javascript">
-	function abtme(open) {
-		var abdiv = document.getElementById("about"),
-		maindiv = document.getElementById("maindiv");
-		if (open) {
-			abdiv.style.display = 'block';
-			maindiv.style.display = 'none';
-		} else {
-			abdiv.style.display = 'none';
-			maindiv.style.display = 'block';
-		}
-	}
-	function htp(open) {
-		var abdiv = document.getElementById("htp"),
-		maindiv = document.getElementById("maindiv");
-		if (open) {
-			abdiv.style.display = 'block';
-			maindiv.style.display = 'none';
-		} else {
-			abdiv.style.display = 'none';
-			maindiv.style.display = 'block';
-		}
-	}
-	function playMusic() {
-const musicFile = 'music/background.mp3'
-const audio = new Audio(musicFile)
-audio.volume = 0.35
-audio.loop = true
-audio.play()
-}
-document.addEventListener('click', playMusic, {once: true})
-</script>
-</body>
-<footer>
-<a class="linkk" href = "https://github.com/camnguyenmeow">
-<img src="img/github.svg" class = "icon">
-</a>
-<a class="linkk" href = "https://www.facebook.com/camnguyenmeow">
-<img  src="img/facebook.svg" class = "icon">
-</a>
-<a class="linkk" href = "mailto:camnguyenmeow@gmail.com">
-<img  src="img/mail.svg" class = "icon">
-</a>
-<a class="linkk" href = "https://camnguyenmeow.github.io/">
-<img  src="img/web.svg" class = "icon">
-</a>
-</footer>
+				<ul class = "abtMay">💛 Tên: Mây </ul>
+				<ul class = "abtMay">💛 Nickname: Mây 2 lằn </ul>
+				<ul class = "abtMay">💛 Giới tính: Nam </ul>
+				<ul class = "abtMay">💛 Sở thích: Cắn người </ul>
+				<ul class = "abtMay">💛 Sợ: Mọi thứ, trừ con người </ul><hr>
+				<ul  class = "abtMay" style = "font-weight: bold;"> "Vì nó cắn mình nhưng mình không được đánh nó, nên mình đã code web này để mng đánh nó giúp mình" </ul><br>
+				<button id="clsabout" onclick="abtme(0)"> ĐÓNG </button>
+			</div>
+			<img src="img/may2.png" style="height: auto; width: 30%; ">
+		</div>
+		<div id="htp" style="display: none;">
+			<h5> CÁCH CHƠI </h5>
+			<ul  class = "abtMay"> Mây đang ngủ, những ai đã từng bị nó cắn hãy nhân cơ hội này đánh nó thật nhanh. <br> Nếu đánh vào lúc nó tỉnh dậy, nó sẽ cắn bạn đấy</ul><br>
+			<button id="clsabout" onclick="htp(0)"> ĐÓNG </button>
+		</div>
+		<div id="maindiv">
+			<div class="wavy">
+				<h1>
+					<span style="--i:1">P</span>
+					<span style="--i:2">L</span>
+					<span style="--i:3">A</span>
+					<span style="--i:4">Y</span>
+					<span style="--i:5">&nbsp;</span>
+					<span style="--i:6">M</span>
+					<span style="--i:7">Â</span>
+					<span style="--i:8">Y</span>
+				</h1>
+			</div>
+			<h4> "Đừng Play Together, hãy Play Mây" </h4><br>
+			<button class="btnhome" onclick="abtme(1)"> Mây là ai ? </button>
+			<button onclick="htp(1)" class="btnhome"> Cách chơi </button>
+			<button class="btnhome" onclick=" location.href='play.html'"> Bắt <br> đầu </button>
+		</div>
+		<script type="text/javascript">
+			function abtme(open) {
+				var abdiv = document.getElementById("about"),
+				maindiv = document.getElementById("maindiv");
+				if (open) {
+					abdiv.style.display = 'block';
+					maindiv.style.display = 'none';
+				} else {
+					abdiv.style.display = 'none';
+					maindiv.style.display = 'block';
+				}
+			}
+			function htp(open) {
+				var abdiv = document.getElementById("htp"),
+				maindiv = document.getElementById("maindiv");
+				if (open) {
+					abdiv.style.display = 'block';
+					maindiv.style.display = 'none';
+				} else {
+					abdiv.style.display = 'none';
+					maindiv.style.display = 'block';
+				}
+			}
+			function playMusic() {
+				const musicFile = 'music/background.mp3'
+				const audio = new Audio(musicFile)
+				audio.volume = 0.35
+				audio.loop = true
+				audio.play()
+			}
+			document.addEventListener('click', playMusic, {once: true})
+		</script>
+	</body>
+	<footer>
+		<a class="linkk" href = "https://github.com/camnguyenmeow">
+			<img src="img/github.svg" class = "icon">
+		</a>
+		<a class="linkk" href = "https://www.facebook.com/camnguyenmeow">
+			<img  src="img/facebook.svg" class = "icon">
+		</a>
+		<a class="linkk" href = "mailto:camnguyenmeow@gmail.com">
+			<img  src="img/mail.svg" class = "icon">
+		</a>
+		<a class="linkk" href = "https://camnguyenmeow.github.io/">
+			<img  src="img/web.svg" class = "icon">
+		</a>
+	</footer>
 </html>
