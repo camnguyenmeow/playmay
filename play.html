@@ -164,6 +164,30 @@
 		<img src="img/close.png" id = "clss" style="display: none;" onclick="kickmay(0)">
 		<img src="img/open.png" id = "openn" style="display: none;" onclick="kickmay(1)">
 	</div>
+	<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBzKuL5L1QPydOXN6aey3GsycNZJLkj5vY",
+    authDomain: "playmay.firebaseapp.com",
+    projectId: "playmay",
+    storageBucket: "playmay.appspot.com",
+    messagingSenderId: "224075999052",
+    appId: "1:224075999052:web:85d3bd0abbbde2b308d1e9",
+    measurementId: "G-Q4SWH26EKM"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+	
 	<script>
 		var score = 0, usertxt, olduser = false, gameover = false, ready = false, dataa;
 		var snore = new Audio("music/snoring.mp3");
