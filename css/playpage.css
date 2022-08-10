@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:900");
+body {
+	background-image: url("../img/may12.png");
+	background-repeat: no-repeat;
+	background-color: #bb99b7;
+	background-size: auto 100%;
+	background-position: center top;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-align: center;
+}
+h3 {
+	font-family: "Kanit";
+	font-size: 3vw;
+	margin: 0;
+	color:  black;
+	line-height: 3.5vw;
+	text-shadow: 0 0 1vw #fdceb3;
+}
+h4 {
+	font-family: "Kanit";
+	font-size: 4vw;
+	margin: 0;
+	color:  #fdceb3;
+	line-height: 5vw;
+	text-shadow: 0 0 1vw black;
+}
+#nametxt {
+	font-size:  2.5vw;
+	font-family:  Arial;
+	width: 30vw;
+}
+#btnsubname {
+	width:  20vw;
+	font-size: 2.5vw;
+	padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+	background: #ecdab9;
+	color:  #a47053;
+	border-radius: 1vw;
+}
+img {
+	margin-top: 1vw;
+	}
+	#zzzimg {
+	position: absolute;
+	width: 10%;
+	left: 50%;
+}
+#angryimg {
+	top:  10vw;
+	position: absolute;
+	width: 10%;
+	left: 50%;
+	display: none;
+}
+#info {
+	margin-top: 1vw;
+	display: none;
+}
+#clss {
+	width: 80%;
+	cursor: pointer;
+}
+#openn {
+	width: 80%;
+	cursor: pointer;
+}
+#stick {
+	position: fixed;
+	transition: transform 0.23s;
+	pointer-events: none;
+}
+#divdream {
+	position: absolute;
+	left: 55%;
+	top: 8%;
+	width: 30%;
+	pointer-events: none;
+	text-align: center;
+	font-size: 3vw;
+	display: none;
+}
+#dreamtxt {
+	position: absolute;
+	top: 10%;
+	left: 40%;
+}
+#highscore {
+	display: none;
+	background: #fdceb3;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}
+#stt {
+	overflow: scroll;
+	height: 90%;
+	width: 99%;
+	text-align: left;
+}
+#clsboard {
+	width:  5vw;
+	font-size: 4vw;
+	padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+	background: #ecdab9;
+	color:  #a47053;
+	border-radius: 1vw;
+	float: right;
+	right:  5vw;
+	position: absolute;
+}
+#share {
+	width:  100%;
+	display:  none;
+}
+.btnshare {
+	width:  auto;
+	font-size: 2.5vw;
+	padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+	background: #ecdab9;
+	color:  #a47053;
+	border-radius: 1vw;
+}
