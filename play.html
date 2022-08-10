@@ -7,30 +7,30 @@
 		
 		<div id="highscore"><button id="clsboard"> X </button>
 			<div id="stt">
-				<h4 style="color:yellow;text-align: center;"> Bảng xếp hạng </h4>
+				<h4 style="color:#F37878;text-align: center;font-family: 'Righteous';font-weight: bolder;"> Highscore </h4>
 			</div>
 			<h3 id="yoursc"> </h3>
 		</div>
 		<form method="post" id="getuser">
-			<h3> Username </h3>
+			<h3 style = "font-family: 'Righteous';color:#F9F9C5;"> Username </h3>
 			<input id="nametxt" required/><br>
 			<button type="submit" name="submit" id="btnsubname"> OK </button>
 		</form>
 		<div id="info">
 			<div id="stick">
-				<img src="img/punch.png" style="width: 30%;margin-right: 20%;">
+				<img src="img/punch.png" style="width: 25%;margin-right: 20%;">
 			</div>
-			<img id="kicksb" src="img/kick.png" style="width: 28%; margin-left: 50px;display: none;position: absolute;">
-			<img src="img/angry.gif" id="angryimg">
+			<img id="kicksb" src="img/kick.png" style="width: 100px; margin-left: 50px;display: none;position: absolute;">
+			<img src="img/angry.gif" id="angryimg" style = "z-index: 1; position: absolute;">
 			<div id="divdream">
 				<h1 id="dreamtxt"> </h1><img src="img/dream.gif" style="width: 100%;">
 			</div>
 			<img src="img/zzz.gif" id="zzzimg">
-			<h4 id="username"> </h4>
-			<h3 id="scoree" style="background:#fdceb3;">  </h3>
-			<div id="share">
-				<button id = "opboard" class="btnshare"> Bảng xếp hạng </button>
-				<button id = "retrybtn" class="btnshare"> Thử lại </button>
+			<h4 id="username"style="background:#FAD9A1;"> </h4>
+			<h3 id="scoree" style="background:#FAE7B4; color: #7D5F2A;font-family: 'Righteous';">  </h3>
+			<div id="share" style = "z-index: 10;">
+				<button id = "opboard" class="btnshare"> Highscore </button>
+				<button id = "retrybtn" class="btnshare"> Retry </button>
 			</div>
 			<img src="img/close.png" id = "clss" style="display: none;" >
 			<img src="img/open.png" id = "openn" style="display: none;">
@@ -88,7 +88,7 @@
 				open = false;
 				function playgame() {
 					if (ready) return;
-					document.body.style.backgroundImage = 'none';
+					document.body.style.backgroundImage = 'url("./img/backgroundkick.gif")';
 					document.getElementById("getuser").style.display = 'none';
 					document.getElementById("info").style.display='block';
 					document.getElementById("username").innerHTML = usertxt;
@@ -152,7 +152,7 @@
 						var tagg = document.createElement("h3");
 						if (tmpdata[i].User === usertxt) {
 							if (getcur) continue;
-							tagg.style.background = "pink";
+							tagg.style.background = "#FAD9A1";
 							vt = cnt;
 							getcur=true;
 						}
@@ -162,7 +162,9 @@
 						++cnt;
 					}
 					var tagg = document.createElement("h3");
-					tagg.style.background = "pink";
+					tagg.style.background = "#FAD9A1";
+					tagg.style.fontFamily = "Kanit";
+					tagg.style.color = "#904444";
 					tagg.className="nameboard";
 					tagg.innerHTML = "Bạn đứng thứ "+vt + " với " + score + " điểm";
 					divboard.appendChild(tagg);
