@@ -1,4 +1,5 @@
-export function insertionSort(inputArr) {
+<script>
+    export function insertionSort(inputArr) {
     let n = inputArr.length;
         for (let i = 1; i < n; i++) {
             let current = inputArr[i];
@@ -11,3 +12,4 @@ export function insertionSort(inputArr) {
         }
     return inputArr;
 }
+</script>
