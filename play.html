@@ -144,7 +144,7 @@
 		Object.keys(snapshot.val()).forEach((key) => {
 			tmpdata.push({'User':key, 'Score': snapshot.val()[key].score});
 		});
-		tmpdata.sort(function(a, b){return a.Score - b.Score});
+		tmpdata.sort(function(a, b){return a.Score > b.Score});
 		divboard.style.display='block';
 		getcur = false, cnt=1;
 					for (let i = 0, sz = tmpdata.length; i < sz; ++i) {
