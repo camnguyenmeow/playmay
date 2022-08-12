@@ -35,6 +35,15 @@
 			<img src="img/close.png" id = "clss" style="display: none;" >
 			<img src="img/open.png" id = "openn" style="display: none;">
 		</div>
+		<script type="text/javascript">
+			function orientationcheck() {
+				if (screen.availHeight > screen.availWidth){
+   					 alert("Hãy xoay ngang thiết bị rồi chọn OK để tiếp tục nhéeee");
+   					 orientationcheck();
+				}
+			}
+			document.body.addEventListener('click', orientationcheck, true);
+		</script>
 		<script type="module">
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 		import { getDatabase, ref, set, get, child, query, orderByValue } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
