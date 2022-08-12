@@ -41,10 +41,10 @@
 			function orientationcheck() {
 				if (screen.availHeight > screen.availWidth){
    					 alert("Hãy xoay ngang thiết bị rồi chọn OK để tiếp tục nhéeee");
-   					 orientationcheck();
 				}
 			}
 			document.body.addEventListener('click', orientationcheck, true);
+			window.onload = orientationcheck;
 		</script>
 		<script src = "js/homepage.js"></script>
 	</body>
