@@ -4,6 +4,12 @@
 		 <link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
+		<div id="highscore"><button id="clsboard"> X </button>
+			<div id="stt">
+				<h5 style="color:#F37878;text-align: center;font-family: 'Righteous';font-weight: bolder;"> Highscore </h5>
+			</div>
+			<h3 id="yoursc"> </h3>
+		</div>
 		<div id="about" style="display: none;">
 			<div style="width: 55%; text-align: left;">
 				<h5 style = "font-weight: bolder;"> SƠ YẾU LÝ LỊCH</h5> <br>
@@ -35,8 +41,67 @@
 			<h4> "Đừng Play Together, hãy Play Mây" </h4><br>
 			<button class="btnhome" onclick="abtme(1)"> Mây là ai ? </button>
 			<button onclick="htp(1)" class="btnhome"> Cách chơi </button>
-			<button class="btnhome" onclick=" location.href='play.html'"> Bắt <br> đầu </button>
+			<button id = "opboard" class = "btnhome"> Highscore </button>
+			<button class="btnhome" onclick=" location.href='play.html'"> Bắt đầu </button>
 		</div>
+		<script type="module">
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+		import { getDatabase, ref, set, get, child, query, orderByValue } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+		const firebaseConfig = {
+		apiKey: "AIzaSyBzKuL5L1QPydOXN6aey3GsycNZJLkj5vY",
+		authDomain: "playmay.firebaseapp.com",
+		databaseURL: "https://playmay-default-rtdb.asia-southeast1.firebasedatabase.app",
+		projectId: "playmay",
+		storageBucket: "playmay.appspot.com",
+		messagingSenderId: "224075999052",
+		appId: "1:224075999052:web:85d3bd0abbbde2b308d1e9"
+		};
+		const app = initializeApp(firebaseConfig);
+		const db = getDatabase(app);
+		const dbRef = ref(getDatabase(app));
+
+var divboard = document.getElementById("highscore"), tmpdata,
+					sttt = document.getElementById("stt");
+				function loadboard() {
+						tmpdata = [];
+
+
+						get(child(dbRef, 'users/')).then((snapshot) => {
+		if (snapshot.exists()) {
+		Object.keys(snapshot.val()).forEach((key) => {
+			tmpdata.push({'User':key, 'Score': snapshot.val()[key].score});
+		});
+		tmpdata.sort(function(a, b){return b.Score - a.Score});
+			
+		var cnt = 1;
+		for (let i of tmpdata) {
+			var tagg = document.createElement("h3");
+			tagg.className="nameboard";
+			tagg.innerHTML = cnt + ". "+i.User + "&nbsp;&nbsp;&nbsp;💜&nbsp;&nbsp;&nbsp;" + i.Score + "&nbsp;&nbsp;điểm";
+			sttt.appendChild(tagg);
+			cnt++;
+		}
+
+		
+		} else {
+		console.log("No data available");
+		}
+		}).catch((error) => {
+		console.error(error);
+		});
+	
+				}
+
+		document.getElementById('opboard').addEventListener('click', openboard);
+		document.getElementById('clsboard').addEventListener('click', closeboard);
+		function closeboard() {
+					document.getElementById("highscore").style.display = 'none';
+				}
+		function openboard() {
+					document.getElementById("highscore").style.display = 'block';
+				}
+				document.addEventListener('click', loadboard, {once: true})
+	</script>
 		<script src = "js/homepage.js"></script>
 	</body>
 	<footer>

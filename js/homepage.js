@@ -27,4 +27,4 @@ function playMusic() {
 	audio.loop = true;
 	audio.play();
 }
-document.addEventListener('click', playMusic, {once: true})
+document.addEventListener('click', playMusic, {once: true});
