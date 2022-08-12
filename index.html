@@ -37,6 +37,15 @@
 			<button onclick="htp(1)" class="btnhome"> Cách chơi </button>
 			<button class="btnhome" onclick=" location.href='play.html'"> Bắt <br> đầu </button>
 		</div>
+		<script type="text/javascript">
+			function orientationcheck() {
+				if (screen.availHeight > screen.availWidth){
+   					 alert("Hãy xoay ngang thiết bị rồi chọn OK để tiếp tục nhéeee");
+   					 orientationcheck();
+				}
+			}
+			document.body.addEventListener('click', orientationcheck, true);
+		</script>
 		<script src = "js/homepage.js"></script>
 	</body>
 	<footer>
