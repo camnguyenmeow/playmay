@@ -89,6 +89,7 @@
 				open = false;
 				function playgame() {
 					if (ready) return;
+					clearInterval(take1);
 					document.body.style.backgroundImage = 'url("./img/backgroundkick.gif")';
 					document.getElementById("getuser").style.display = 'none';
 					document.getElementById("info").style.display='block';
